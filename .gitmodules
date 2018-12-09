@@ -1,0 +1,3 @@
+[submodule "threads_in_java.wiki"]
+	path = threads_in_java.wiki
+	url = https://gitlab.com/ritam_mukherjee/threads_in_java.wiki.git
