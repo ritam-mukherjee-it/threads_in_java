@@ -1,4 +1,4 @@
-package producer_consumer_pattern;
+package executor_service;
 
 public class ThreadColor {
     public static final String ANSI_RESET = "\u001B[0m";
