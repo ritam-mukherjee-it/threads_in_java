@@ -10,6 +10,12 @@ public class CompleteableFutureProgram2 {
 
         ExecutorService service=Executors.newFixedThreadPool(5);
 
+        /**
+         * By default all asynchronous task runs in common fork join pool
+         * JVM launch this common fork-join pool
+         * Common Fork-join pool is also an executor service with some more capabilities
+         * Through Stram API when we launch parellal task, those task are exxecuted by Fork -Join pool
+         * */
 
         Runnable runnable_task1=() ->
                 System.out.println(Thread.currentThread().getName() +"  Runnable_Task_1 has executed");

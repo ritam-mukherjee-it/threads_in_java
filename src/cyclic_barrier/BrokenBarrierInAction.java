@@ -1,7 +1,8 @@
-package concepts.threads.cyclic_barrier.plural_sight_example;
+package cyclic_barrier;
 
 /**
  * Source   :   PluralSight
+ * Purpose  : barrier wait for sometime, if then all sub-tasks execution not completed barrier breaks
  */
 
 import java.util.ArrayList;
@@ -12,31 +13,38 @@ import java.util.concurrent.*;
 public class BrokenBarrierInAction {
     public static void main(String[] args) {
 
-        class Friend implements Callable{
+        class ColourfulFriend implements Callable {
 
             private CyclicBarrier cyclicBarrier;
+            private String nam;
 
-            public Friend(CyclicBarrier cyclicBarrier) {
+            public ColourfulFriend(CyclicBarrier cyclicBarrier, String nam) {
+
                 this.cyclicBarrier = cyclicBarrier;
+                this.nam = nam;
+                Thread.currentThread().setName(nam);
             }
 
             @Override
             public String call() throws Exception {
 
-                Random random=new Random();
-                Thread.sleep(random.nextInt(20)*100+100);
-                System.out.println("I just arrived,waiting for others...");
+                Random random = new Random();
+                Thread.sleep(random.nextInt(20) * 100 + 100);
+                System.out.println(ThreadColor.getThreadColor.apply(nam)
+                        +nam+"_friend"
+                        + ":I just arrived,waiting for others...");
                 cyclicBarrier.await(10,TimeUnit.SECONDS);
-               /* Here Barrier wait for 10 seconds and then throw broken barrier Exception*/
 
-                System.out.println("let's go for a cinema");
+                System.out.println(ThreadColor.getThreadColor.apply(nam)
+                        +nam+"_friend"
+                        + ":let's go for a cinema");
                 return "ok";
             }
         }
 
 
         ExecutorService service= Executors.newFixedThreadPool(3);
-        /*In cyclicBariier if there is a count of 4, atleast 4 thread needed in block to release barrier
+        /*In cyclicBariier if there is a count of 4, at-least 4 thread needed in block to release barrier
         * In this program: if the count of Thread we reduce less than 4, barrier will not open, if we don't metion waiting time
         * */
         CyclicBarrier barrier=new CyclicBarrier(4,() -> System.out.println("barrier Opening..."));
@@ -44,7 +52,7 @@ public class BrokenBarrierInAction {
 
         try {
             for (int i = 0; i <4 ; i++) {
-                Friend friend=new Friend(barrier);
+                ColourfulFriend friend=new ColourfulFriend(barrier,ThreadColor.colors[i]);
                 futures.add(service.submit(friend));
             }
 
