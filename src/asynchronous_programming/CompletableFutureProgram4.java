@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 
 public class CompletableFutureProgram4 {
     public static void main(String[] args) {
-        
+
         Supplier<String> task = () -> {
             try {
                 Thread.sleep(1000); /*waiting for 1000 milis*/
