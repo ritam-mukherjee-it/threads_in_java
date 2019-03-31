@@ -6,11 +6,18 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-
+/**
+ * @apiNote : this approach resolve the problem by using wait() and notify() pattern.
+ */
 public class ProducerConsumerResolverUsingLock {
+
+    /*ReentrantLock is a concrete implementation of lock interface*/
     static Lock lock = new ReentrantLock();
+
+   /* Two condition objects aare associate with the lock object*/
     static Condition isFull = lock.newCondition();
     static Condition isEmpty = lock.newCondition();
+
     private static int[] buffer;
     private static int count;
 

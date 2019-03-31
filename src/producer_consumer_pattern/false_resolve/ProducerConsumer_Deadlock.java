@@ -2,6 +2,9 @@ package producer_consumer_pattern.false_resolve;
 
 import producer_consumer_pattern.ThreadColor;
 
+/**
+ * @apiNote : this approach only resolve the race condition but there is chance of getting deadlock
+ */
 public class ProducerConsumer_Deadlock {
 
     private static Object lock = new Object();
