@@ -1,4 +1,4 @@
-package concepts.threads.thread_pool.udemy;
+package thread_pool;
 
 /**
  * Created by timbuchalka on 25/05/2016.

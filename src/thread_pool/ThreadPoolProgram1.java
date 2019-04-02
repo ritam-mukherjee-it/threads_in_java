@@ -1,4 +1,4 @@
-package concepts.threads.thread_pool.udemy;
+package thread_pool;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
 
 
-public class Thread_ThreadPool {
+public class ThreadPoolProgram1 {
     public static final String EOF = "EOF";
 
     public static void main(String[] args) {
@@ -44,6 +44,7 @@ public class Thread_ThreadPool {
     }
 }
 
+/*
 class MyProducer implements Runnable {
     private List<String> buffer;
     private String color;
@@ -84,8 +85,9 @@ class MyProducer implements Runnable {
         }
     }
 }
+*/
 
-class MyConsumer implements Runnable {
+/*class MyConsumer implements Runnable {
     private List<String> buffer;
     private String color;
     private ReentrantLock bufferLock;
@@ -109,7 +111,7 @@ class MyConsumer implements Runnable {
                     System.out.println(color + "The counter = "+ counter);
                     counter = 0;
 
-                    if(buffer.get(0).equals(Thread_ThreadPool.EOF)) {
+                    if(buffer.get(0).equals(ThreadPoolProgram2.EOF)) {
                         System.out.println(color + "Exiting");
                         break;
                     } else {
@@ -123,7 +125,7 @@ class MyConsumer implements Runnable {
             }
         }
     }
-}
+}*/
 
 
 

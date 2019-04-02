@@ -1,4 +1,4 @@
-package concepts.threads.thread_local;
+package thread_local;
 
 /**
  * Created by ritmukherjee on 9/20/2016.
