@@ -11,25 +11,25 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ProducerConsumerResolverUsingLock {
 
+    private static int[] buffer;
+    private static int count;
+
     /*ReentrantLock is a concrete implementation of lock interface*/
     static Lock lock = new ReentrantLock();
 
    /* Two condition objects aare associate with the lock object*/
-    static Condition isFull = lock.newCondition();
-    static Condition isEmpty = lock.newCondition();
+    static Condition isFullCondition = lock.newCondition();
+    static Condition isEmptyCondition = lock.newCondition();
 
-    private static int[] buffer;
-    private static int count;
 
     static class Producer {
         void produce() {
-
             try {
                 lock.lock();
                 if (isFull(buffer))
-                    isFull.await();
+                    isFullCondition.await();
                 buffer[count++] = 1;
-                isEmpty.signal();
+                isEmptyCondition.signal();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
@@ -43,13 +43,13 @@ public class ProducerConsumerResolverUsingLock {
             try {
                 lock.lock();
                 if (isEmpty(buffer))
-                    isEmpty.await();
+                    isEmptyCondition.await();
                 buffer[--count] = 0;
-                isFull.signal();
+                isFullCondition.signal();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
-                isEmpty.signal();
+                isEmptyCondition.signal();
             }
         }
     }
