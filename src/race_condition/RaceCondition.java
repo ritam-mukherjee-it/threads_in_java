@@ -1,6 +1,9 @@
 package race_condition;
 
-
+/**
+ * @see https://gitlab.com/ritam_mukherjee/threads_in_java/-/blob/master/src/race_condition/RaceCondition.java
+ * @see https://gitlab.com/ritam_mukherjee/threads_in_java/-/blob/master/src/race_condition/LongWrapper.java
+ */
 class RaceCondition {
 
 	public static void main(String[] args) throws InterruptedException {

@@ -1,7 +1,10 @@
 package deadlock.approach1;
 
 
-
+/**
+ * @see : https://gitlab.com/ritam_mukherjee/threads_in_java/-/blob/master/src/deadlock/approach1/DeadlockRunner.java
+ * @see : https://gitlab.com/ritam_mukherjee/threads_in_java/-/blob/master/src/deadlock/approach1/DeadLock.java
+ */
 public class DeadlockRunner {
 
 	public static void main(String[] args) throws InterruptedException {
