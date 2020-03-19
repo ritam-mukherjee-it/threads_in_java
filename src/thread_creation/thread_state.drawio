@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-03-19T13:35:29.556Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36" etag="5wN19uHH-SsBlOkhmmOP" version="12.8.8" type="gitlab">
+<mxfile host="app.diagrams.net" modified="2020-03-19T13:49:37.477Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36" etag="1vz73vlrsKMG5HceuKAJ" version="12.8.8" type="gitlab">
   <diagram id="emNID539-pXMUfD4VGAK" name="Page-1">
-    <mxGraphModel dx="1038" dy="1647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1888" dy="1647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -138,14 +138,14 @@
             <mxPoint x="570" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ssqRMr3fGbRzZ1t1TIG6-75" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#330066;" parent="1" vertex="1">
-          <mxGeometry x="520" y="330" width="40" height="20" as="geometry" />
+        <mxCell id="ssqRMr3fGbRzZ1t1TIG6-75" value="t.resume" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#330066;" parent="1" vertex="1">
+          <mxGeometry x="320" y="620" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="ssqRMr3fGbRzZ1t1TIG6-76" value="&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#331a00&quot;&gt;object.wait()&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#331a00&quot;&gt;object.wait(1000ms)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#331a00&quot;&gt;object.wait(1000ms,100ns)&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#330066;" parent="1" vertex="1">
           <mxGeometry x="520" y="380" width="200" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ssqRMr3fGbRzZ1t1TIG6-77" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#330066;" parent="1" vertex="1">
-          <mxGeometry x="520" y="330" width="40" height="20" as="geometry" />
+        <mxCell id="ssqRMr3fGbRzZ1t1TIG6-77" value="t.suspend()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#330066;" parent="1" vertex="1">
+          <mxGeometry x="610" y="620" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="ssqRMr3fGbRzZ1t1TIG6-78" value="&lt;ul&gt;&lt;li&gt;&lt;font color=&quot;#994c00&quot;&gt;If waiting thread got notification.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#994c00&quot;&gt;if time expires&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#994c00&quot;&gt;If waiting thread got interrupted.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontColor=#330066;" parent="1" vertex="1">
           <mxGeometry x="400" y="460" width="220" height="70" as="geometry" />
@@ -169,6 +169,41 @@
             <Array as="points">
               <mxPoint x="256" y="640" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XZ_ET_w5QgRAjZi853Qq-10" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="210" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XZ_ET_w5QgRAjZi853Qq-11" value="&lt;font color=&quot;#99004d&quot;&gt;start() method&lt;br&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#99004d&quot;&gt;register thread with thread scheduler.&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#99004d&quot;&gt;start a new thread in java&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#99004d&quot;&gt;invoke run() method&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="-22" y="380" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="XZ_ET_w5QgRAjZi853Qq-12" value="" style="endArrow=classic;html=1;entryX=0.037;entryY=0.193;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="ssqRMr3fGbRzZ1t1TIG6-3" target="ssqRMr3fGbRzZ1t1TIG6-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="340" as="sourcePoint" />
+            <mxPoint x="810" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="760" y="240" />
+              <mxPoint x="780" y="240" />
+              <mxPoint x="910" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XZ_ET_w5QgRAjZi853Qq-13" value="t.stop()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="220" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="XZ_ET_w5QgRAjZi853Qq-15" value="&lt;span style=&quot;color: rgb(153 , 0 , 77)&quot;&gt;sleep()&lt;/span&gt;&lt;br style=&quot;color: rgb(153 , 0 , 77)&quot;&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#99004d&quot;&gt;if a thread doesn&#39;t&amp;nbsp;want to perform any operation, just want to&amp;nbsp;&lt;/font&gt;&lt;font color=&quot;#99004d&quot;&gt;take pause for few time, sleep() method needed&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;color: rgb(153 , 0 , 77) ; text-align: left&quot;&gt;&lt;font color=&quot;#99004d&quot;&gt;doesvnot release ownership of any object monitor&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=delay;whiteSpace=wrap;html=1;strokeColor=#EA6B66;" vertex="1" parent="1">
+          <mxGeometry x="800" y="-30" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XZ_ET_w5QgRAjZi853Qq-16" value="&lt;span style=&quot;color: rgb(153 , 0 , 77)&quot;&gt;join()&lt;/span&gt;&lt;br style=&quot;color: rgb(153 , 0 , 77)&quot;&gt;&lt;ul style=&quot;color: rgb(153 , 0 , 77)&quot;&gt;&lt;li style=&quot;text-align: left&quot;&gt;If a thread want to wait until completion of some other thread and then execute&lt;/li&gt;&lt;/ul&gt;" style="shape=delay;whiteSpace=wrap;html=1;strokeColor=#EA6B66;" vertex="1" parent="1">
+          <mxGeometry x="800" y="80" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="XZ_ET_w5QgRAjZi853Qq-17" value="&lt;span style=&quot;color: rgb(153 , 0 , 77)&quot;&gt;wait()/notify()&lt;/span&gt;&lt;br style=&quot;color: rgb(153 , 0 , 77)&quot;&gt;&lt;ul style=&quot;color: rgb(153 , 0 , 77)&quot;&gt;&lt;li style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#99004d&quot;&gt;if a thread expecting any update from any other thread go waiting state,.&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#99004d&quot;&gt;The thread which is responsible for update , after update it should call notify() method to make waiting thread back into execution&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=delay;whiteSpace=wrap;html=1;strokeColor=#EA6B66;" vertex="1" parent="1">
+          <mxGeometry x="800" y="480" width="350" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="XZ_ET_w5QgRAjZi853Qq-19" value="" style="endArrow=classic;html=1;entryX=0.61;entryY=1.028;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="ssqRMr3fGbRzZ1t1TIG6-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="323" y="477" as="sourcePoint" />
+            <mxPoint x="375" y="440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
