@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @apiNote : this approach resolve the problem by using wait() and notify() pattern.
  */
-public class ProducerConsumerResolverUsingLock {
+public class  ProducerConsumerResolverUsingLock {
 
     private static int[] buffer;
     private static int count;
