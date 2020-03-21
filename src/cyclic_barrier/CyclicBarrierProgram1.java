@@ -8,7 +8,7 @@ import java.util.concurrent.CyclicBarrier;
 
 /**
  * @see : https://gitlab.com/ritam_mukherjee/threads_in_java/-/blob/master/src/cyclic_barrier/CyclicBarrierProgram1.java
- * 
+ *
  */
 public class CyclicBarrierProgram1 {
 
