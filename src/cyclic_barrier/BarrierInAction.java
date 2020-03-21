@@ -1,6 +1,7 @@
 package cyclic_barrier;
 /**
- * Source   :   PluralSight
+ * @see  : https://gitlab.com/ritam_mukherjee/threads_in_java/-/blob/master/src/cyclic_barrier/BarrierInAction.java
+ *
  */
 
 import java.util.ArrayList;
@@ -30,7 +31,7 @@ public class BarrierInAction {
                 System.out.println(ThreadColor.getThreadColor.apply(nam)
                         +nam+"_friend"
                         + ":I just arrived,waiting for others...");
-                cyclicBarrier.await();
+                cyclicBarrier.await();  //waiting point introduced
 
                 System.out.println(ThreadColor.getThreadColor.apply(nam)
                         +nam+"_friend"

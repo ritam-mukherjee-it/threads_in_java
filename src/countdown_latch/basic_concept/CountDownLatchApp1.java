@@ -19,7 +19,6 @@ class Processor implements Runnable{
     public void run() {
         String STRING_COLOR= ThreadColor.getThreadColor.apply(Thread.currentThread().getName());
 
-
         System.out.println(STRING_COLOR+ Thread.currentThread().getName()+" has started,\'Latch count\':"
                         + countDownLatch.getCount());
         try {
@@ -33,6 +32,11 @@ class Processor implements Runnable{
         System.out.println(STRING_COLOR+Thread.currentThread().getName() +" has reduced count,'Latch count':" + countDownLatch.getCount());
     }
 }
+
+/**
+ * @see : https://gitlab.com/ritam_mukherjee/threads_in_java/-/blob/master/src/countdown_latch/basic_concept/CountDownLatchApp1.java
+ */
+
 public class CountDownLatchApp1 {
     public static void main(String[] args) {
         try{
